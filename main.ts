@@ -16,13 +16,12 @@ function convolution(new_signal: number, buffer: number[]){
 
     // Perform the convolution(dot product of buffer and "kernel")
     let result = 0.0;
-
-    // If this is working fine, optimization can happen here
+    
     for (let i = 0; i < window_size; ++i){
-        result += buffer[i] * kernel;
+        result += buffer[i];
     }
 
-    return result
+    return result * kernel;
 }
 
 // Main
